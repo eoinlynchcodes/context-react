@@ -1,13 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+html {
+  font-size: 16px; /* 16px * 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+}
 body {
+  font: 1.6em ;
+  font-family: 'Lato';
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, h1, h2, h3, h4, h5, p{
+  font-family: 'Lato';
+  color: #17262e;
+}
+
+h1{
+  font-size: 3em;
+}
+
+h2{
+  font-size: 2.5em;
+}
+
+h3{
+  font-size: 2em;
+}
+
+h4{
+  font-size: 1.5em;
+}
+
+h5, label{
+  font-size: 1.2em;
+}
+
+p, ul, li, i{
+  font-size: 1em;
+}
+
+button {
+  font-size: 1.6em;
+}
+.full-width {
+  width: 100%;
+}
+#root {
+  height: 100%;
+}
+
+.linebreaks{
+  white-space: pre-line;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 4em 4em;
+  background-color: white;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  background-color: #17262e;
+  align-items: center;
+}
+
+.greenText{
+  color: #0f9961;
+}
+
+.redButton{
+  background-color: red;
+  color: white;
+  padding: 1em 1em;
+  border-radius: 24px;
+  justify-self: flex-end;
+}
+
+.sectionOne{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40em;
+  background-color: white;
+}
+
+.mainHeading{
+  background-color: white;
+  height: auto;
+}
+
+.sectionTwo{
+  border: 3em solid #17262e;
+  background-color: #0f9961;
+  color: white;
+  padding: 2em 4em;
+  margin: 0 auto;
+  text-align: left;
+  border-radius: 20px;
+}
+
+.insideSectionTwo{
+  background-color: white;
+  color: #17262e;
+  padding: 1em;
+  border-radius: 24px;
+}
+
+.textAndForm{
+  background-color: white;
+  border-radius: 12px;
+}
+
+.primary{
+  border: 15px solid #0f9961;
+  padding: 1em 2em;
+  width: 60%;
+  margin: 1em;
+  border-radius: 24px;
+  background-color: white;
+}
+.primary p {
+  text-align: left
+}
+
+.whiteText{
+  color: white;
+}
+
+.image img{
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userDataCollection{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 24px;
+  border: 2px solid grey;
+  padding: 1em 2em;
+  cursor: pointer;
+}
+
+.forHeight{
+  height: 25em;
+  margin: 5em auto;
+}
+
+.primaryBenefits{
+  border-radius: 24px;
+  display: flex;
+  flex-direction: row;
+  background-color: #17262e;
+}
+
+.getEarlyAccess{
+  background-color: red;
+  padding: 0em 0em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 0 auto;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+.getEarlyAccess p{
+  color: white;
+}
+
+.getEarlyAccess:hover{
+  background-color: #0f9961;
+  color: #0f9961;
+}
+
+.imageContainer img{
+  border-radius: 24px;
+}
+
+.hr{
+  width: 20%;
+  margin: 0 auto;
+}
+
+.made{
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.in{
+  background-color: white;
+  padding: 1em;
+}
+
+.ireland{
+  background-color: orange;
+  padding: 1em;
+}
+
+.eoinlynch{
+  background-color: white;
+  color: black;
+  padding: 0em 1em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.eoinlynch a{
+  color: black;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  color: #333333;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f9961;
+  color: #17262e;
+}
+
+/* Navigation Code */
+.login-text{
+  text-decoration: none;
+  color: white;
+  padding: 1em 2em;
+  background-color: black;
+  width: 4em;
+  display: flex;
+  justify-content: center;
+}
+
+.signup-text{
+  text-decoration: none;
+  color: white;
+  padding: 1em 2em;
+  background-color: red;
+  margin: 0em 2em;
+  width: 4em;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* /signup route  */
+.signup-form{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #0f9961;
+  padding: 2em 2em;
+  border-radius: 12px;
+}
+
+/* /login route */
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #0f9961;
+  padding: 2em 2em;
+  border-radius: 12px;
+}
+
+/* /dashboard route */
+.schedule-meeting-div{
+display: flex;
+flex-direction: row;
+}
+
+.future-meetings{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 2em 2em;
+  border: 2px solid #333333;
+  padding: .5em 2em;
+  border-radius: 12px;
+}
+
+/* /dashboard route && SideNavigation Component */
+
+.dashboard-section-one{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.side-navigation-section{
+  background-color: #0f9961;
+  width: 12%;
+  display: flex;
+  justify-content: center;
+}
+
+.side-nav{
+  height: 100%;
+  color: white;
+}
+
+.navigationTab{
+  text-decoration: none;
+}
+
+
+/* /dashboard route && Scheduler Component */
+.schedule-form{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 2em auto;
+  border: 2px solid #333333;
+  padding: .5em 2em;
+  border-radius: 12px;
+}
+
+.scheduler-section{
+  width: 50%;
+}
+
+
+/* /dashboard route && Future Meetings Component */
+
+.individual-meeting{
+  border: 1px solid grey;
+  border-radius: 12px;
+  padding: 2em 2em;
+}
+
+.goToMeetingText{
+  background-color: #0f9961;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: .5em .5em;
+  width: 50%;
+}
+
+.report-container{
+}
+
+.report{
+  cursor: pointer;
+  border: 2px solid green;
+  padding: 2rem 2rem;
+  margin: 2rem auto;
+  width: 80%;
+}
+
+/* /ongoingmeeting route and Component */
+.ongoingmeeting-div{
+  display: flex;
+}
+
+.side-navigation-section{
+  width: 12%;
+}
+
+.videobox{
+  width: 70%;
+}
+
+.the-videobox{
+  width: 700px;
+  height: 700px;
+}
+
+.meeting-tracker-section{
+  max-width: 20%;
+  background-color: #333333;
+  padding: 2em 2em;
+}
+
+.whiteText{
+  color: white;
+}
+
+textarea{
+  width: 100%;
+}
+
+.ongoingmeetingform{
+  width: 100%;
+  border-radius: 12px;
+}
+
+.video-box{
+  width: 100%;
+  height: auto;
+}
+
+.save-meeting-button{
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 1em 1em;
+  cursor: pointer;
+}
+
+.save-meeting-button{
+  display: flex;
+  background-color: #0f9961;
+  color: white;
+}
+
+
+/* MEDIA QUERIES FROM HERE DOWN */
+
+@media only screen and (max-width: 1100px) {
+  .container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0em 0em;
+  }
+
+  .sectionOne{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .imageContainer img{
+    max-width: 100%;
+    margin: 2em auto;
+    border-radius: 0px;
+  }
+
+  .sectionTwo{
+    border: 1em solid #17262e;
+    padding: 1em 1em;
+    max-width: 100%;
+    flex-direction: row;
+  }
+
+  .primaryBenefits{
+    flex-direction: column;
+  }
+
+  .forHeight{
+    height: auto;
+  }
+
+  .whiteText{
+    font-size: 1.5em;
+    text-align: center;
+  }
 }
