@@ -24,7 +24,7 @@ function Signup() {
 
     const handleSubmit = (event) => {
       event.preventDefault();
-      axios.post(`${process.env.REACT_APP_DATABASE_URL}/auth/users/register`, individual)
+      axios.post(`${process.env.REACT_APP_DATABASE_URL}auth/users/register`, individual)
       .then(response => {
         setIndividual(response.data);
         history.push('/login');  
@@ -34,7 +34,7 @@ function Signup() {
       });
   }
 
-  
+
   return (
     <div>
       <form onSubmit={event => handleSubmit(event)} className="signup-form">
