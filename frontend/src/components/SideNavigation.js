@@ -4,21 +4,21 @@ import { Link } from "react-router-dom";
 function SideNavigation() {
   return (
     <div className="side-nav">
-      <Link to="/profile">
-        <div>
-          <h4 className="navigationTab">Profile</h4>
-        </div>
+      <Link className="Link" to="/profile">
+          <h4 className="no-decoration">Profile</h4>
       </Link>
-      <Link to="/schedulemeeting">
-        <div>
-          <h4 className="navigationTab">Schedule</h4>
-        </div>
+      <hr/>
+
+      <Link className="Link" to="/schedulemeeting">
+          <h4 className="no-decoration">Schedule</h4>
       </Link>
-      <Link to="/futuremeetings">
-        <div>
-          <h4 className="navigationTab">Future</h4>
-        </div>
+      <hr/>
+
+      <Link className="Link" to="/futuremeetings">
+          <h4 className="no-decoration">Future</h4>
       </Link>
+      <hr/>
+
     </div>
   );
 }

@@ -311,7 +311,15 @@ flex-direction: row;
   color: white;
 }
 
-.navigationTab{
+.side-nav .Link{
+  text-decoration: none;
+}
+
+.side-nav .Link:hover{
+  background-color: #333333;
+}
+
+.no-decoration{
   text-decoration: none;
 }
 
@@ -376,8 +384,8 @@ flex-direction: row;
 }
 
 .the-videobox{
-  width: 700px;
-  height: 700px;
+  width: 100%;
+  height: 800px;
 }
 
 .meeting-tracker-section{
