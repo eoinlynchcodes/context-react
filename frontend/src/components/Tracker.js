@@ -56,10 +56,10 @@ function Tracker(props) {
         {currentMeetingData.agenda ? <u><b>Agenda:</b></u> : null}
       </p>
       <p className="whiteText">
-        {currentMeetingData.context ?  <p className="whiteText"><u><b>To Decide:</b></u><br/> {currentMeetingData.context}</p> : null}
+        {currentMeetingData.context ?  <p className="whiteText"><u><b>Context:</b></u><br/> {currentMeetingData.context}</p> : null}
       </p>
       <p className="whiteText">
-        {currentMeetingData.decisionstomake ?  <p className="whiteText"><u><b>To Decide:</b></u><br/> {currentMeetingData.decisionstomake}</p> : null}
+        {currentMeetingData.decisionstomake ?  <p className="whiteText"><u><b>Points:</b></u><br/> {currentMeetingData.decisionstomake}</p> : null}
       </p>
       <br />
 
