@@ -3,13 +3,10 @@ import VideoCallFrame from './VideoCallFrame';
 
 function DailycoApp() {
   return (
-    <div className="">
-      <header className="">
-        <VideoCallFrame
+    <div className="video-box">
+        <VideoCallFrame className="iframe"
           url={ process.env.REACT_APP_DAILY_ROOM_URL }
         ></VideoCallFrame>
-
-      </header>
     </div>
   );
 }

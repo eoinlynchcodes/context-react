@@ -51,8 +51,12 @@ function Tracker(props) {
       {/* <p className="whiteText">
         {currentMeetingData.context ? (<u><b>Context:</b></u> {currentMeetingData.context} ) : null}
       </p> */}
+      {console.log(currentMeetingData)}
       <p className="whiteText">
         {currentMeetingData.agenda ? <u><b>Agenda:</b></u> : null}
+      </p>
+      <p className="whiteText">
+        {currentMeetingData.context ?  <p className="whiteText"><u><b>To Decide:</b></u><br/> {currentMeetingData.context}</p> : null}
       </p>
       <p className="whiteText">
         {currentMeetingData.decisionstomake ?  <p className="whiteText"><u><b>To Decide:</b></u><br/> {currentMeetingData.decisionstomake}</p> : null}

@@ -4,7 +4,7 @@ import DailycoApp from '../daily-co/DailycoApp';
 function Videobox(){
 
     return(
-        <div className="video-box">
+        <div>
             <DailycoApp/>
         </div>
     );
