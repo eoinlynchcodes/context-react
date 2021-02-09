@@ -16,6 +16,11 @@ function FutureMeetings() {
       });
   }, []);
 
+  const deleteHandler = (id) => {
+    axios.delete(`${process.env.REACT_APP_DATABASE_URL}/api/meetings/${id}`);
+    window.location.reload();
+  }
+
   return (
     <div>
       <div className="">
@@ -24,8 +29,7 @@ function FutureMeetings() {
           return (
             <div className="linebreaks individual-meeting">
               <h2>{item.meetingtitle}</h2>
-              {console.log(item)}
-              {/* <p><u><b>Agenda:</b></u> {item.agenda}</p> */}
+              <button onClick={ () =>  deleteHandler(item.id)}>Delete</button>
               <p><u><b>When?</b></u><br/>{item.startTime}-{item.endTime}, {item.date}</p>
               <p><u><b>Context:</b></u><br/> {item.context}</p>
               <p><u><b>To decide:</b></u><br/> {item.decisionsToMake} </p>
