@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 
 function Login(){
 
@@ -18,11 +18,14 @@ function Login(){
         });
     };
 
+    // Function to Login
     const handleSubmit = (event) => {
+        debugger
         event.preventDefault();
         axios.post(`${process.env.REACT_APP_DATABASE_URL}/auth/users/login`, loginData)
         .then(response => {
             setLoginData(response.data);
+            localStorage.setItem('userID', response.data.userID);
             history.push('/dashboard');
         })
         .catch(error => {
