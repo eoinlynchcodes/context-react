@@ -11,7 +11,7 @@ function Tracker(props) {
     agenda: currentMeetingData.agenda,
     context: currentMeetingData.context,
     date: Date.now(),
-    decisionstomake: currentMeetingData.decisionstomake,
+    inputs: currentMeetingData.inputs,
     whoIsneeded: currentMeetingData.whoisneeded,
     meetingtitle: currentMeetingData.meetingtitle,
     originalmeetingid: currentMeetingData.id,
@@ -59,12 +59,22 @@ function Tracker(props) {
         {currentMeetingData.context ?  <p className="whiteText"><u><b>Context:</b></u><br/> {currentMeetingData.context}</p> : null}
       </p>
       <p className="whiteText">
-        {currentMeetingData.decisionstomake ?  <p className="whiteText"><u><b>Points:</b></u><br/> {currentMeetingData.decisionstomake}</p> : null}
+        {currentMeetingData.inputs ?  <p className="whiteText"><u><b>Points:</b></u><br/> {currentMeetingData.inputs}</p> : null}
       </p>
       <br />
 
       <form className="ongoingmeetingform" onSubmit={endMeeting}>
-        <label className="whiteText">Decisions Made:</label>
+      <label className="whiteText">Notes:</label>
+        <br />
+        <textarea
+          name="notes"
+          rows="20"
+          placeholder="Eg. Decisions made, actions to take, next steps, etc.:"
+          onChange={(event) => changeHandler(event)}
+        />
+        <br />
+        <br />
+        {/* <label className="whiteText">Decisions Made:</label>
         <br />
         <textarea
           name="decisionresults"
@@ -94,7 +104,7 @@ function Tracker(props) {
           placeholder="What should be done next?"
           onChange={(event) => changeHandler(event)}
         />
-        <br />
+        <br /> */}
           <h5 onClick={endMeeting} type="submit" className="save-meeting-button">Save Meeting</h5>
       </form>
     </div>

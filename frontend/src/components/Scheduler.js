@@ -13,7 +13,7 @@ function Scheduler() {
     starttime: "",
     endtime: "",
     meetingtype: "",
-    decisionstomake: "",
+    inputs: "",
   });
 
   const changeHandler = (event) => {
@@ -110,10 +110,11 @@ function Scheduler() {
           />
         <br />
 
-        <label>Decisions/Questions/Points of discussion:</label>
+        <label>Inputs:</label>
           <textarea
             rows="6"
-            name="decisionstomake"
+            name="inputs"
+            placeholder="Eg.Decisions / Questions / Points of discussion:"
             onChange={(event) => changeHandler(event)}
           />
         <br />

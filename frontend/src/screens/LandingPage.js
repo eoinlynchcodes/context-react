@@ -48,7 +48,7 @@ function LandingPage() {
               Happier teams.
             </h1>
   
-            <form id="#joinWaitlist"
+            {/* <form id="#joinWaitlist"
               onSubmit={(event) => handleSubmit(event)}
               className="userDataCollection"
             >
@@ -66,7 +66,7 @@ function LandingPage() {
                   <b>Get early access</b>
                 </p>
               </div>
-            </form>
+            </form> */}
           </div>
           <div className="imageContainer">
             <img src={aine} alt="woman looking at computer during meeting" />

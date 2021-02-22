@@ -32,10 +32,10 @@ function FutureMeetings() {
               <button onClick={ () =>  deleteHandler(item.id)}>Delete</button>
               <p><u><b>When?</b></u><br/>{item.startTime}-{item.endTime}, {item.date}</p>
               <p><u><b>Context:</b></u><br/> {item.context}</p>
-              <p><u><b>To decide:</b></u><br/> {item.decisionsToMake} </p>
+              <p><u><b>Inputs:</b></u><br/> {item.inputs} </p>
               <p><u><b>Who is needed:</b></u><br/> {item.whoIsneeded} </p>
               <p><u><b>Date:</b></u><br/> {item.date} </p>
-              <p><u><b>Discuss:</b></u><br/>{item.decisionstomake}
+              <p><u><b>Inputs:</b></u><br/>{item.inputs}
               </p>
               <Link className="goToMeetingText"
                 to={{
