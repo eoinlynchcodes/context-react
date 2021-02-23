@@ -15,8 +15,6 @@ function Tracker(props) {
     whoIsneeded: currentMeetingData.whoisneeded,
     meetingtitle: currentMeetingData.meetingtitle,
     originalmeetingid: currentMeetingData.id,
-    decisionresults: "",
-    nextsteps: "",
     notes: "",
   });
 
@@ -59,12 +57,12 @@ function Tracker(props) {
         {currentMeetingData.context ?  <p className="whiteText"><u><b>Context:</b></u><br/> {currentMeetingData.context}</p> : null}
       </p>
       <p className="whiteText">
-        {currentMeetingData.inputs ?  <p className="whiteText"><u><b>Points:</b></u><br/> {currentMeetingData.inputs}</p> : null}
+        {currentMeetingData.inputs ?  <p className="whiteText"><u><b>Inputs:</b></u><br/> {currentMeetingData.inputs}</p> : null}
       </p>
       <br />
 
       <form className="ongoingmeetingform" onSubmit={endMeeting}>
-      <label className="whiteText">Notes:</label>
+      <label className="whiteText">Outputs:</label>
         <br />
         <textarea
           name="notes"
@@ -73,38 +71,7 @@ function Tracker(props) {
           onChange={(event) => changeHandler(event)}
         />
         <br />
-        <br />
-        {/* <label className="whiteText">Decisions Made:</label>
-        <br />
-        <textarea
-          name="decisionresults"
-          rows="8"
-          placeholder="Results of decisions go here:"
-          onChange={(event) => changeHandler(event)}
-        />
-        <br />
-        <br />
-
-        <label className="whiteText">Notes:</label>
-        <br />
-        <textarea
-          name="notes"
-          rows="8"
-          placeholder="Results of decisions go here:"
-          onChange={(event) => changeHandler(event)}
-        />
-        <br />
-        <br />
-
-        <label className="whiteText">Next Steps:</label>
-        <br />
-        <textarea
-          name="nextsteps"
-          rows="8"
-          placeholder="What should be done next?"
-          onChange={(event) => changeHandler(event)}
-        />
-        <br /> */}
+        <br />      
           <h5 onClick={endMeeting} type="submit" className="save-meeting-button">Save Meeting</h5>
       </form>
     </div>
