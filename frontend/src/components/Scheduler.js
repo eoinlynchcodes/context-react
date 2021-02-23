@@ -22,7 +22,7 @@ function Scheduler() {
   
   const sendMeetingData = (event) => {
     event.preventDefault();
-    axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/meetings/newmeeting`, meeting)
+    axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/meetings/`, meeting)
       .then((response) => {
         console.log(response);
         window.location.reload();

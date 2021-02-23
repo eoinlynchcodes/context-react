@@ -27,8 +27,6 @@ function Tracker(props) {
 
   const endMeeting = (event) => {
     event.preventDefault();
-    debugger
-    console.log(fromMeeting);
     console.log(`${process.env.REACT_APP_DATABASE_URL}`);
     axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/meetings/meetingreport`, fromMeeting)
       .then(response => {
