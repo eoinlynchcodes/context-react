@@ -20,9 +20,8 @@ function Login(){
 
     // Function to Login
     const handleSubmit = (event) => {
-        debugger
         event.preventDefault();
-        axios.post(`${process.env.REACT_APP_DATABASE_URL}/auth/users/login`, loginData)
+        axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/users/login`, loginData)
         .then(response => {
             setLoginData(response.data);
             localStorage.setItem('userID', response.data.userID);
