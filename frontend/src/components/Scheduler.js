@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-// import DatePicker from "react-datepicker";
-// import "react-datepicker/dist/react-datepicker.css";
 
 function Scheduler() {
   const [meeting, setMeeting] = useState({
@@ -37,7 +35,6 @@ function Scheduler() {
       <form  onSubmit={sendMeetingData} className="schedule-form">
         <h2>Next meeting:</h2>        
         <label>Date:</label>
-          {/* <DatePicker name="date" placeholder="Date" /> */}
           <input 
           name="date"
           placeholder="Date:"
@@ -88,20 +85,8 @@ function Scheduler() {
             <option value="recurring">Recurring</option>
           </select>
         <br />
-
-        {/* <label>Agenda:</label>
-          <textarea
-            name="agenda"
-            placeholder="Agenda:"
-            rows="6"
-            onChange={(event) => changeHandler(event)}
-          />
-        <br /> */}
-
         
-
         <label>Context:</label>
-          {/* <DatePicker name="date" placeholder="Date" /> */}
           <textarea 
           name="context"
           placeholder="Context:"

@@ -21,10 +21,11 @@ function Login(){
     // Function to Login
     const handleSubmit = (event) => {
         event.preventDefault();
+        
         axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/users/login`, loginData)
         .then(response => {
             setLoginData(response.data);
-            localStorage.setItem('userID', response.data.userID);
+            localStorage.setItem('token', response.data);
             history.push('/dashboard');
         })
         .catch(error => {
@@ -36,13 +37,6 @@ function Login(){
         <div>
             <form onSubmit={event => handleSubmit(event)} className="login-form"> 
             <h2>Log In</h2>
-                <label>Company Code:</label>
-                    <input 
-                    name="companycode"
-                    type="text"
-                    onChange={(event) => handleChange(event)}
-                    />
-                <br/>
                 <label>Email Address:</label>
                     <input 
                     name="emailaddress"
