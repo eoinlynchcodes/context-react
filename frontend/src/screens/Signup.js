@@ -23,7 +23,7 @@ function Signup() {
 
     const handleSubmit = (event) => {
       event.preventDefault();
-      axios.post(`/api/users/register`, individual)
+      axios.post(`api/users/register`, individual)
       .then(response => {
         setIndividual(response.data);
         history.push('/login');  
