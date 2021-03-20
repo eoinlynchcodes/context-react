@@ -36,7 +36,6 @@ function Report(){
                             <h5><u>Next Steps:</u><br/> {item.nextsteps}</h5>
                             <h5><u>Prior Context:</u>
                                 <br/>{item.context}</h5>
-                            {/* <h5>Attendants: {item.whoIsneeded}</h5> */}
                         </div>
                     );
                 })

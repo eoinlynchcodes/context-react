@@ -17,7 +17,9 @@ function Scheduler() {
   const changeHandler = (event) => {
     setMeeting({ ...meeting, [event.target.name]: event.target.value });
   };
-  
+
+
+  // :id needs to be added to endpoint with the userid of the logged in user returned
   const sendMeetingData = (event) => {
     event.preventDefault();
     axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/meetings/`, meeting)
