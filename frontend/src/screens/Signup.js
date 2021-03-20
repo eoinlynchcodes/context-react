@@ -23,8 +23,6 @@ function Signup() {
 
     const handleSubmit = (event) => {
       event.preventDefault();
-      debugger
-      console.log(individual);
       axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/users/register`, individual)
       .then(response => {
         setIndividual(response.data);
