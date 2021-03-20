@@ -35,7 +35,6 @@ function Signup() {
       });
   }
 
-
   return (
     <div>
       <form onSubmit={event => handleSubmit(event)} className="signup-form">
