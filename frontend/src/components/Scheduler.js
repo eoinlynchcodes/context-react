@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function Scheduler() {
+
+  const fromLocalStorage = JSON.parse(localStorage.getItem('userInfo'));
+  const loggedInUserID = fromLocalStorage._id;
+
   const [meeting, setMeeting] = useState({
+    userid: loggedInUserID,
     date: "",
-    agenda: "",
-    context: "",
-    whoisneeded: "",
-    meetingtitle: "",
     starttime: "",
     endtime: "",
+    meetingtitle: "",
+    whoisneeded: "",
     meetingtype: "",
+    context: "",
     inputs: "",
   });
 

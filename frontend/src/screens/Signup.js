@@ -23,7 +23,7 @@ function Signup() {
 
     const handleSubmit = (event) => {
       event.preventDefault();
-      axios.post(`api/users/register`, individual)
+      axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/users/register`, individual)
       .then(response => {
         setIndividual(response.data);
         history.push('/login');  
@@ -36,7 +36,7 @@ function Signup() {
   return (
     <div>
       <form onSubmit={event => handleSubmit(event)} className="signup-form">
-        <h2>Join your company area</h2>
+        <h2>Sign-up:</h2>
 
         <label>Email:</label>
         <input

@@ -3,8 +3,11 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 function FutureMeetings() {
+
+  const fromLocalStorage = JSON.parse(localStorage.getItem('userInfo'));
+  const loggedInUserID = fromLocalStorage._id; 
+  
   const [meetingData, setMeetingData] = useState([]);
-  const loggedInUserID = localStorage.getItem("userID");
 
   useEffect(() => {
     axios
@@ -18,7 +21,7 @@ function FutureMeetings() {
   }, []);
 
   const deleteHandler = (id) => {
-    axios.delete(`${process.env.REACT_APP_DATABASE_URL}/api/meetings/${id}`);
+    axios.delete(`${process.env.REACT_APP_DATABASE_URL}/api/meetings/${loggedInUserID}`);
     window.location.reload();
   };
 
@@ -27,8 +30,7 @@ function FutureMeetings() {
       <div className="">
         <h2>Future Meetings:</h2>
         {meetingData.map((item, key) => {
-          {console.log(item.userID, loggedInUserID)}
-          if (item.userID === loggedInUserID) {
+          if (item.userID) {
             return (
               <div className="linebreaks individual-meeting">
                 <h2>{item.meetingtitle}</h2>

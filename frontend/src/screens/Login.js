@@ -25,7 +25,7 @@ function Login(){
         axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/users/login`, loginData)
         .then(response => {
             setLoginData(response.data);
-            localStorage.setItem('token', response.data);
+            localStorage.setItem('userInfo', JSON.stringify(response.data));
             history.push('/dashboard');
         })
         .catch(error => {
